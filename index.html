@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình </title>
+    <script src="mani.js"></script>
+
+</head>
+<body>
+<h3 id="Điểm Trung Bình"></h3>
+<label >
+    Điểm Lý
+</label>
+<label for="ly"></label><input type="number" id="ly">
+<label >
+    Điểm Hóa
+</label>
+<label for="hoa"></label><input type="number" id="hoa">
+<label >
+    Điểm Sinh
+</label>
+<label for="sinh"></label><input type="number" id="sinh">
+<button onclick="diemTrungBinh()">
+    Điểm Trung Bình
+</button>
+<script>
+    function diemTrungBinh() {
+        let ly= +document.getElementById('ly').value;
+        let hoa= +document.getElementById('hoa').value;
+        let sinh= +document.getElementById('sinh').value;
+        let avg=(ly+hoa+sinh)/3;
+        console.log(avg)
+        document.getElementById('Điểm Trung Bình').innerText="Điểm trung bình: "+avg
+    }
+</script>
+</body>
+</html>
